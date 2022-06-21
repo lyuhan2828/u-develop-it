@@ -68,6 +68,8 @@ router.get('/voter/:id', (req, res) => {
     });
   });
 
+  
+
   router.put('/voter/:id', (req, res) => {
     // Data validation
     const errors = inputCheck(req.body, 'email');
