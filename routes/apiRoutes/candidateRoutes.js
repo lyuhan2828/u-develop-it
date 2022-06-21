@@ -60,7 +60,12 @@ router.post('/candidate', ({ body }, res) => {
 
   const sql = `INSERT INTO candidates (first_name, last_name, industry_connected)
   VALUES (?,?,?)`;
-const params = [body.first_name, body.last_name, body.industry_connected];
+const params = [
+  body.first_name, 
+  body.last_name, 
+  body.industry_connected,
+  body.party_id
+];
 
 db.query(sql, params, (err, result) => {
   if (err) {
